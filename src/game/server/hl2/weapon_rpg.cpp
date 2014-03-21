@@ -39,7 +39,7 @@
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
-#define	RPG_SPEED	1500
+#define	RPG_SPEED	3000
 
 static ConVar sk_apc_missile_damage("sk_apc_missile_damage", "15");
 ConVar rpg_missle_use_custom_detonators( "rpg_missle_use_custom_detonators", "1" );
@@ -166,7 +166,7 @@ void CMissile::Spawn( void )
 	SetThink( &CMissile::IgniteThink );
 	
 	SetNextThink( gpGlobals->curtime + 0.3f );
-	SetDamage( 200.0f );
+	SetDamage( 400.0f );
 
 	m_takedamage = DAMAGE_YES;
 	m_iHealth = m_iMaxHealth = 100;
@@ -489,7 +489,7 @@ void CMissile::GetShootPosition( CLaserDot *pLaserDot, Vector *pShootPosition )
 //-----------------------------------------------------------------------------
 // Purpose: 
 //-----------------------------------------------------------------------------
-#define	RPG_HOMING_SPEED	0.125f
+#define	RPG_HOMING_SPEED	0.25f
 
 void CMissile::ComputeActualDotPosition( CLaserDot *pLaserDot, Vector *pActualDotPosition, float *pHomingSpeed )
 {

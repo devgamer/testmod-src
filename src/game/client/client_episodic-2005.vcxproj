@@ -143,7 +143,7 @@ if exist "C:\Program Files (x86)\Steam\steamapps\SourceMods\testmod\bin\client.p
 if exist "$(TargetDir)"client.pdb copy "$(TargetDir)"client.pdb "C:\Program Files (x86)\Steam\steamapps\SourceMods\testmod\bin\client.pdb"
 </Command>
       <Outputs>C:\Program Files (x86)\Steam\steamapps\SourceMods\testmod\bin\client.dll;C:\Program Files (x86)\Steam\steamapps\SourceMods\testmod\bin\client.pdb;%(Outputs)</Outputs>
-      <Inputs>$(TargetPath)</Inputs>
+      <Inputs>$(TargetPath);C:\Program Files (x86)\Steam\SteamApps\sourcemods\testmod\bin</Inputs>
     </CustomBuildStep>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
