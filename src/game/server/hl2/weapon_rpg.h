@@ -29,7 +29,7 @@ class CMissile : public CBaseCombatCharacter
 	DECLARE_CLASS( CMissile, CBaseCombatCharacter );
 
 public:
-	static const int EXPLOSION_RADIUS = 200;
+	static const int EXPLOSION_RADIUS = 400;
 
 	CMissile();
 	~CMissile();
